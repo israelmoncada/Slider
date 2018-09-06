@@ -1,0 +1,241 @@
+
+@font-face{
+    font-family: 'Athene';
+    src: url(../fonts/Athene.otf);    
+}
+@font-face{
+    font-family: 'Avenir-lt';
+    src: url(../fonts/AvenirNextLTPro-Regular.otf)
+}
+@font-face{
+    font-family: 'Avenir-lt';
+    src: url(../fonts/AvenirNextLTPro-It.otf);
+    font-style: italic;
+}
+/*Slide con logo*/
+
+.slide.logo::after{
+    content: ' ';
+    height: 80%;
+    width: 7.25%;
+    background: url(../images/logo11.png) no-repeat top center/100%;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+/*Estilos genrales*/
+.slide .nospace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.banner-left{    
+    background-color: #fff;    
+    /*padding: 1% 3% 1% 32.62%;*/
+    padding: 65px 3% 75px 32.62%;
+    overflow: hidden;
+}
+.slide.banner-left .banner{
+    height: 100%;
+    width: 31.62%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/1/banner.jpg) no-repeat 100% center/ cover;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;    
+}
+.slide.banner-left .content{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-left: 80px;
+    box-sizing: border-box;    
+}
+.slide h1{
+    font-family: 'Athene';
+    font-size: 4.12em;
+    position: relative;
+}
+.slide h1::before{
+    content: ' ';
+    background: url(../images/botones/1.png) no-repeat center center/contain;    
+    width: 4.2rem;
+    height: 4.2rem;
+    display: inline-block;
+    position: absolute;
+    left: -4.3rem;
+    top: 0.5rem;
+}
+
+.slide p{
+    font-size: 1.35em;
+    color: #000;
+    font-family: 'Avenir-lt';
+}
+
+
+.slide .content>.step{display: none;}
+.slide .content>.step.present{display: block;}
+
+.slide .intNav{
+    width: 20%;
+    max-width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0; right: 0;
+    box-sizing: border-box;
+}
+.slide .intNav .top, .slide .intNav .bottom{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: right;
+    right: 10px;
+}
+
+.slide .intNav .bottom{    
+    bottom: 10px;
+    top: initial;
+}
+
+.slide .intNav>div>div{
+    display: inline-block;
+    width: 28%;
+    height: 55px;
+    cursor: pointer;
+    background: transparent no-repeat center center/contain;
+}
+.slide .intNav>div:nth-child(2)>div{
+    width: 42%; height: 65px;
+}
+
+
+.slide .intNav .siguiente{ background-image: url(../images/1/siguiente.png); }
+.slide .intNav .anterior{ background-image: url(../images/1/anterior.png);}
+.slide .intNav .home{ background-image: url(../images/1/home.png) }
+.slide .intNav .prev{ background-image: url(../images/1/ant.png) }
+.slide .intNav .next{ background-image: url(../images/1/next.png) }
+
+
+.imgResponsive{
+    max-width: 100%;
+    max-height: 100%;
+    height: inherit !important;
+    margin: auto;
+    display: block;
+}
+/*Portada*/
+#portada{
+    background: url(../images/portada/bgPortada.jpg) center center / cover;
+
+}
+#portada .puntos{
+    background: url(../images/portada/puntos.png)  no-repeat 0% center/ 100% auto;
+}
+#portada .titulo{
+    background: url(../images/portada/titlePortada.png) no-repeat center center/ contain;
+    height: 30%;
+    top: 0; bottom: 0; margin: auto;
+}
+
+#portada nav{
+    position: absolute;
+    bottom: 12%;
+    height: auto;
+    text-align: center;
+    width: 100%;
+    height: 120px;
+}
+
+#portada nav .button{    
+    width: 5.2%;
+    height: 100%;
+    max-width: 110px;
+    max-height: 120px;
+    min-width: 80px;
+    margin: 1.2em 0px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../images/botones/1.png) no-repeat center center/contain;
+}
+#portada nav .button:nth-child(2){background-image: url(../images/botones/2.png);}
+#portada nav .button:nth-child(3){background-image: url(../images/botones/3.png);}
+#portada nav .button:nth-child(4){background-image: url(../images/botones/4.png);}
+#portada nav .button:nth-child(5){background-image: url(../images/botones/5.png);}
+#portada nav .button:nth-child(6){background-image: url(../images/botones/6.png);}
+#portada nav .button:nth-child(7){background-image: url(../images/botones/7.png);}
+#portada nav .button:nth-child(2){background-image: url(../images/botones/2.png);}
+
+/*1*/
+
+#Ubicuo.banner-left .banner{background-image: url(../images/1/banner.jpg);}
+#Ubicuo h1 {color: #815a1f;}
+#Ubicuo h1::before{background-image:url(../images/botones/1.png); }
+
+#Ubicuo .intNav .prev{ background-image: url(../images/1/ant.png) }
+#Ubicuo .intNav .next{ background-image: url(../images/1/next.png) }
+/*2*/
+#Retroalimentacion.banner-left .banner{background-image: url(../images/2/banner.jpg);}
+#Retroalimentacion h1 {color: #a2c84e;}
+#Retroalimentacion h1 >span{color: #3e5012;}
+#Retroalimentacion h1::before{background-image:url(../images/botones/2.png); }
+
+#Retroalimentacion .intNav .prev{ background-image: url(../images/2/ant.png) }
+#Retroalimentacion .intNav .next{ background-image: url(../images/2/next.png) }
+/*3*/
+#Multimodal.banner-left .banner{background-image: url(../images/3/banner.png);}
+#Multimodal h1 {color: #ff7a39;}
+#Multimodal h1::before{background-image:url(../images/botones/3.png); }
+
+#Multimodal .intNav .prev{ background-image: url(../images/3/ant.png) }
+#Multimodal .intNav .next{ background-image: url(../images/3/next.png) }
+/*4*/
+#Conocimiento.banner-left .banner{background-image: url(../images/4/banner.png);}
+#Conocimiento h1 {color: #ff3838;}
+#Conocimiento h1::before{background-image:url(../images/botones/4.png); }
+
+#Conocimiento .intNav .prev{ background-image: url(../images/4/ant.png) }
+#Conocimiento .intNav .next{ background-image: url(../images/4/next.png) }
+/*5*/
+#Inteligencia.banner-left .banner{background-image: url(../images/5/banner.png);}
+#Inteligencia h1 {color: #38ceff;}
+#Inteligencia h1::before{background-image:url(../images/botones/5.png); }
+
+#Inteligencia .intNav .prev{ background-image: url(../images/5/ant.png) }
+#Inteligencia .intNav .next{ background-image: url(../images/5/next.png) }
+/*6*/
+#Metacognicion.banner-left .banner{background-image: url(../images/6/banner.png);}
+#Metacognicion h1 {color: #f436ca;}
+#Metacognicion h1::before{background-image:url(../images/botones/6.png); }
+
+#Metacognicion .intNav .prev{ background-image: url(../images/6/ant.png) }
+#Metacognicion .intNav .next{ background-image: url(../images/6/next.png) }
+/*7*/
+#Aprendizaje.banner-left .banner{background-image: url(../images/7/banner.png);}
+#Aprendizaje h1 {color: #5bd389;}
+#Aprendizaje h1::before{background-image:url(../images/botones/7.png); }
+
+#Aprendizaje .intNav .prev{ background-image: url(../images/7/ant.png) }
+#Aprendizaje .intNav .next{ background-image: url(../images/7/next.png) }
+
+
+@media (max-width:950px){
+    #portada .titulo{height: 25%;}
+}
+
+@media (max-width:800px){
+    #portada .titulo{height: 20%;}
+}
+@media (max-width:650px){
+    #portada .titulo{height: 16%;}
+    #portada nav .button{ max-width: 80px; min-width: 60px; margin: 0.8em 0px;}
+}
+
+@media (max-width:450px){
+    #portada .titulo{height: 12%;}
+    #portada nav .button{ max-width: 60px; min-width: 40px; margin: 0.6em 0px;}
+}
