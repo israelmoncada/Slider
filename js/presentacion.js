@@ -53,10 +53,10 @@ function checkStepButtons(slide){
     $('.intNav .next',slide).css('opacity', presente.siblings('.future').length?'1':'0');
     $('.intNav .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
 }
-$(window).load(function(){ preloadImages([
+$(window).on('load',function(){ preloadImages([
     'images/portada/bgPortada.jpg','images/portada/puntos.jpg','images/portada/titlePortada.jpg',
     'images/botones/1.png','images/botones/2.png','images/botones/3.png','images/botones/4.png','images/botones/5.png','images/botones/6.png','images/botones/7.png']
-    ,()=>$('.loader').hide())});
+    ,()=>$('.loader').hide())});    
 $(function(){
     $('nav .button').hover((evObject)=>{        
         $(evObject.target).animateCss('jello faster');
