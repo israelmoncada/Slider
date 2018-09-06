@@ -53,11 +53,6 @@ function checkStepButtons(slide){
     $('.intNav .next',slide).css('opacity', presente.siblings('.future').length?'1':'0');
     $('.intNav .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
 }
-/*$(window).on('ready',function(){ preloadImages([
-    'images/portada/bgPortada.jpg','images/portada/puntos.png','images/portada/titlePortada.png',
-    'images/botones/1.png','images/botones/2.png','images/botones/3.png','images/botones/4.png','images/botones/5.png','images/botones/6.png','images/botones/7.png']
-    ,()=>$('.loader').hide())});
-*/
 $(function(){
     $('nav .button').hover((evObject)=>{        
         $(evObject.target).animateCss('jello faster');
@@ -65,5 +60,8 @@ $(function(){
     $('.intNav .prev, .intNav .next').click(goStep);
     $('.intNav .home').click(()=>goToSlide(1));
     $('.intNav .anterior, .intNav .siguiente').click(avanzaTema);
+    $('#portada nav .button').each( (idx, el) =>{ 
+        $(el).after( $('<span>').addClass('tooltip').text( $(el).data('title')));
+    });
 });
 

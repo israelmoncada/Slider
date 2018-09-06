@@ -133,6 +133,8 @@
 }
 
 .imgResponsive.long{max-width: 50%;}
+
+
 /*Portada*/
 #portada{
     background: url(../images/portada/bgPortada.jpg) center center / cover;
@@ -175,6 +177,7 @@
 #portada nav .button:nth-child(7){background-image: url(../images/botones/7.png);}
 #portada nav .button:nth-child(2){background-image: url(../images/botones/2.png);}
 
+#portada nav .button+.tooltip{ position: absolute; background: #fff; color: #5a3908; padding: 2px; border: solid 1px;}
 /*1*/
 
 #Ubicuo.banner-left .banner{background-image: url(../images/1/banner.jpg);}
