@@ -11,7 +11,7 @@ function preloadImages(arrayOfImages, callback){
     var handleLoad = function(){
         if (++preloadCount === arrayOfImages.length && callback) {
             callback();
-        }                    
+        } 
     }; 
     
     for(i=0, j= arrayOfImages.length; i<j;i++){
@@ -54,7 +54,7 @@ function checkStepButtons(slide){
     $('.intNav .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
 }
 $(window).on('load',function(){ preloadImages([
-    'images/portada/bgPortada.jpg','images/portada/puntos.jpg','images/portada/titlePortada.jpg',
+    'images/portada/bgPortada.jpg','images/portada/puntos.png','images/portada/titlePortada.png',
     'images/botones/1.png','images/botones/2.png','images/botones/3.png','images/botones/4.png','images/botones/5.png','images/botones/6.png','images/botones/7.png']
     ,()=>$('.loader').hide())});    
 $(function(){
