@@ -63,13 +63,13 @@
 }
 .slide h1::before{
     content: ' ';
-    background: url(../images/botones/1.png) no-repeat center center/contain;    
-    width: 4.2rem;
-    height: 4.2rem;
+    background: url(../images/botones/1.png) no-repeat center center/contain;
+    width: 3.2rem;
+    height: 3.2rem;
     display: inline-block;
     position: absolute;
-    left: -4.3rem;
-    top: 0.5rem;
+    left: -3.3rem;
+    top: -0.5rem;
 }
 
 .slide p{
@@ -128,7 +128,11 @@
     height: inherit !important;
     margin: auto;
     display: block;
+    width: 100%;
+    max-width: 597px;
 }
+
+.imgResponsive.long{max-width: 50%;}
 /*Portada*/
 #portada{
     background: url(../images/portada/bgPortada.jpg) center center / cover;
@@ -247,4 +251,7 @@
     #portada nav .button{ max-width: 60px; min-width: 40px; margin: 0.6em 0px;}
     .slide h1{ font-size: 1.05em; }
     .slide p{ font-size: 0.5em; }
+}
+@media handheld ( orientation:portrait ){
+    .imgResponsive.long{max-width: 100%;}   
 }
