@@ -4,6 +4,26 @@ navigatedCallback = function(slide){
     $('.step',slide).removeClass('present past future').addClass('future').eq(0).removeClass('future').addClass('present');
     checkStepButtons(slide);
 }
+
+function preloadImages(arrayOfImages, callback){
+    var preloadCount =0;
+    var i,j;                
+    var handleLoad = function(){
+        if (++preloadCount === arrayOfImages.length && callback) {
+            callback();
+        }                    
+    }; 
+    
+    for(i=0, j= arrayOfImages.length; i<j;i++){
+        (function(img,src){
+            img.onload = handleLoad;
+            img.onerror = handleLoad;
+            img.onabort = handleLoad;
+            img.src = src;
+        })(new Image(),arrayOfImages[i]);
+    }
+}
+
 function goStep(evObject){
     var sender = $(evObject.target);
     if (sender.css('opacity') == '0') return;
@@ -33,6 +53,10 @@ function checkStepButtons(slide){
     $('.intNav .next',slide).css('opacity', presente.siblings('.future').length?'1':'0');
     $('.intNav .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
 }
+$(window).load(function(){ preloadImages([
+    'images/portada/bgPortada.jpg','images/portada/puntos.jpg','images/portada/titlePortada.jpg',
+    'images/botones/1.png','images/botones/2.png','images/botones/3.png','images/botones/4.png','images/botones/5.png','images/botones/6.png','images/botones/7.png']
+    ,()=>$('.loader').hide())});
 $(function(){
     $('nav .button').hover((evObject)=>{        
         $(evObject.target).animateCss('jello faster');
@@ -41,3 +65,4 @@ $(function(){
     $('.intNav .home').click(()=>goToSlide(1));
     $('.intNav .anterior, .intNav .siguiente').click(avanzaTema);
 });
+
