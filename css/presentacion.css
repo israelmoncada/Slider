@@ -277,6 +277,8 @@ div.imgResponsive.title{
 #Aprendizaje .navToolbar .prev{ background-image: url(../images/7/ant.png) }
 #Aprendizaje .navToolbar .next{ background-image: url(../images/7/next.png) }
 
+#Creditos { background: #fff;  color: #333; font-size: 0.8em; font-family: 'Avenir-lt'  }
+
 @media (max-width:950px){
     #portada .titulo{height: 25%;}
     .slide h1{ font-size: 1.85em; }
