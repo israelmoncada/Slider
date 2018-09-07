@@ -50,16 +50,16 @@ function avanzaTema(evObject){
 }
 function checkStepButtons(slide){
     var presente =$('.step.present', slide);
-    $('.intNav .next',slide).css('opacity', presente.siblings('.future').length?'1':'0');
-    $('.intNav .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
+    $('.navToolbar .next',slide).css('opacity', presente.siblings('.future').length?'1':'0');
+    $('.navToolbar .prev',slide).css('opacity', presente.siblings('.past').length?'1':'0');    
 }
 $(function(){
     $('nav .button').hover((evObject)=>{        
         $(evObject.target).animateCss('jello faster');
     });
-    $('.intNav .prev, .intNav .next').click(goStep);
-    $('.intNav .home').click(()=>goToSlide(1));
-    $('.intNav .anterior, .intNav .siguiente').click(avanzaTema);
+    $('.navToolbar .prev, .navToolbar .next').click(goStep);
+    $('.navToolbar .home').click(()=>goToSlide(1));
+    $('.navToolbar .anterior, .navToolbar .siguiente').click(avanzaTema);
     /*$('#portada nav .button').each( (idx, el) =>{ 
         $(el).after( $('<span>').addClass('tooltip').text( $(el).data('title')));
     });*/

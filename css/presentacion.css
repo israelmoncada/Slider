@@ -53,7 +53,8 @@
     height: 100%;
     overflow-y: auto;
     padding-left: 80px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    position: relative;
 }
 .slide h1{
     font-family: 'Cities';
@@ -79,50 +80,51 @@
 }
 
 
-.slide .content>.step{display: none;}
+.slide .content>.step{display: none; position: absolute;width: calc(100% - 80px); height: 100%;}
 .slide .content>.step.present{display: block;}
 
-.slide .intNav{
+/*.slide .intNav{
     width: 20%;
     max-width: 200px;
     height: 100%;
     position: absolute;
     top: 0; right: 0;
     box-sizing: border-box;
-}
-.slide .intNav .top, .slide .intNav .bottom{
+}*/
+.slide .navToolbar, .slide .navToolbar{
     position: absolute;
     top: 10px;
-    width: 100%;
+    width: 20%;
+    min-width: 100px;
     text-align: right;
     right: 10px;
 }
 
-.slide .intNav .bottom{    
+.slide .navToolbar.bottom{    
     bottom: 10px;
     top: initial;
 }
 
-.slide .intNav>div>div{
+.slide .navToolbar>div{
     display: inline-block;
     width: 28%;
     height: 55px;
     cursor: pointer;
     background: transparent no-repeat center center/contain;
 }
-.slide .intNav>div:nth-child(2)>div{
+.slide .navToolbar.bottom>div{
     width: 42%; height: 65px;
 }
 
 
-.slide .intNav .siguiente{ background-image: url(../images/1/siguiente.png); }
-.slide .intNav .anterior{ background-image: url(../images/1/anterior.png);}
-.slide .intNav .home{ background-image: url(../images/1/home.png) }
-.slide .intNav .prev{ background-image: url(../images/1/ant.png) }
-.slide .intNav .next{ background-image: url(../images/1/next.png) }
+.slide .navToolbar .siguiente{ background-image: url(../images/1/siguiente.png); }
+.slide .navToolbar .anterior{ background-image: url(../images/1/anterior.png);}
+.slide .navToolbar .home{ background-image: url(../images/1/home.png) }
+.slide .navToolbar .prev{ background-image: url(../images/1/ant.png) }
+.slide .navToolbar .next{ background-image: url(../images/1/next.png) }
 
 
-.imgResponsive{
+img.imgResponsive{
     max-width: 100%;
     max-height: 100%;
     height: inherit !important;
@@ -132,8 +134,17 @@
     max-width: 597px;
 }
 
-.imgResponsive.long{max-width: 50%;}
+img.imgResponsive.long{max-width: 50%;}
 
+
+div.imgResponsive{
+    width: 100%;    
+    background: transparent no-repeat center center / contain;    
+    height: 100%;
+}
+div.imgResponsive.title{
+    height: calc( 100% - 136px);
+}
 
 /*Portada*/
 #portada{
@@ -184,51 +195,51 @@
 #Ubicuo h1 {color: #815a1f;}
 #Ubicuo h1::before{background-image:url(../images/botones/1.png); }
 
-#Ubicuo .intNav .prev{ background-image: url(../images/1/ant.png) }
-#Ubicuo .intNav .next{ background-image: url(../images/1/next.png) }
+#Ubicuo .navToolbar .prev{ background-image: url(../images/1/ant.png) }
+#Ubicuo .navToolbar .next{ background-image: url(../images/1/next.png) }
 /*2*/
 #Retroalimentacion.banner-left .banner{background-image: url(../images/2/banner.jpg);}
 #Retroalimentacion h1 {color: #a2c84e;}
 #Retroalimentacion h1 >span{color: #3e5012;}
 #Retroalimentacion h1::before{background-image:url(../images/botones/2.png); }
 
-#Retroalimentacion .intNav .prev{ background-image: url(../images/2/ant.png) }
-#Retroalimentacion .intNav .next{ background-image: url(../images/2/next.png) }
+#Retroalimentacion .navToolbar .prev{ background-image: url(../images/2/ant.png) }
+#Retroalimentacion .navToolbar .next{ background-image: url(../images/2/next.png) }
 /*3*/
 #Multimodal.banner-left .banner{background-image: url(../images/3/banner.png);}
 #Multimodal h1 {color: #ff7a39;}
 #Multimodal h1::before{background-image:url(../images/botones/3.png); }
 
-#Multimodal .intNav .prev{ background-image: url(../images/3/ant.png) }
-#Multimodal .intNav .next{ background-image: url(../images/3/next.png) }
+#Multimodal .navToolbar .prev{ background-image: url(../images/3/ant.png) }
+#Multimodal .navToolbar .next{ background-image: url(../images/3/next.png) }
 /*4*/
 #Conocimiento.banner-left .banner{background-image: url(../images/4/banner.png);}
 #Conocimiento h1 {color: #ff3838;}
 #Conocimiento h1::before{background-image:url(../images/botones/4.png); }
 
-#Conocimiento .intNav .prev{ background-image: url(../images/4/ant.png) }
-#Conocimiento .intNav .next{ background-image: url(../images/4/next.png) }
+#Conocimiento .navToolbar .prev{ background-image: url(../images/4/ant.png) }
+#Conocimiento .navToolbar .next{ background-image: url(../images/4/next.png) }
 /*5*/
 #Inteligencia.banner-left .banner{background-image: url(../images/5/banner.png);}
 #Inteligencia h1 {color: #38ceff;}
 #Inteligencia h1::before{background-image:url(../images/botones/5.png); }
 
-#Inteligencia .intNav .prev{ background-image: url(../images/5/ant.png) }
-#Inteligencia .intNav .next{ background-image: url(../images/5/next.png) }
+#Inteligencia .navToolbar .prev{ background-image: url(../images/5/ant.png) }
+#Inteligencia .navToolbar .next{ background-image: url(../images/5/next.png) }
 /*6*/
 #Metacognicion.banner-left .banner{background-image: url(../images/6/banner.png);}
 #Metacognicion h1 {color: #f436ca;}
 #Metacognicion h1::before{background-image:url(../images/botones/6.png); }
 
-#Metacognicion .intNav .prev{ background-image: url(../images/6/ant.png) }
-#Metacognicion .intNav .next{ background-image: url(../images/6/next.png) }
+#Metacognicion .navToolbar .prev{ background-image: url(../images/6/ant.png) }
+#Metacognicion .navToolbar .next{ background-image: url(../images/6/next.png) }
 /*7*/
 #Aprendizaje.banner-left .banner{background-image: url(../images/7/banner.png);}
 #Aprendizaje h1 {color: #5bd389;}
 #Aprendizaje h1::before{background-image:url(../images/botones/7.png); }
 
-#Aprendizaje .intNav .prev{ background-image: url(../images/7/ant.png) }
-#Aprendizaje .intNav .next{ background-image: url(../images/7/next.png) }
+#Aprendizaje .navToolbar .prev{ background-image: url(../images/7/ant.png) }
+#Aprendizaje .navToolbar .next{ background-image: url(../images/7/next.png) }
 
 @media (max-width:950px){
     #portada .titulo{height: 25%;}
@@ -255,6 +266,6 @@
     .slide h1{ font-size: 1.05em; }
     .slide p{ font-size: 0.5em; }
 }
-@media handheld ( orientation:portrait ){
-    .imgResponsive.long{max-width: 100%;}   
+@media (orientation:portrait ){
+    img.imgResponsive.long{max-width: 100%;}   
 }
