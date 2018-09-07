@@ -146,6 +146,16 @@ div.imgResponsive.title{
     height: calc( 100% - 136px);
 }
 
+/*Intro*/
+#intro{
+    background: #fff url(../images/intro/1.jpg) center center/ cover;    
+}
+#intro .centro{
+    background: transparent url(../images/intro/2.png) center center/ contain;
+    width: 100%;
+    height: 100%;
+}
+
 /*Portada*/
 #portada{
     background: url(../images/portada/bgPortada.jpg) center center / cover;

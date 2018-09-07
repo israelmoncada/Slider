@@ -58,10 +58,11 @@ $(function(){
         $(evObject.target).animateCss('jello faster');
     });
     $('.navToolbar .prev, .navToolbar .next').click(goStep);
-    $('.navToolbar .home').click(()=>goToSlide(1));
+    $('.navToolbar .home').click(()=>goToSlide(2));
     $('.navToolbar .anterior, .navToolbar .siguiente').click(avanzaTema);
     /*$('#portada nav .button').each( (idx, el) =>{ 
         $(el).after( $('<span>').addClass('tooltip').text( $(el).data('title')));
     });*/
+    $('#intro, #intro .centro').click(()=>goToSlide(2));
 });
 
