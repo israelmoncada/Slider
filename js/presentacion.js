@@ -60,8 +60,8 @@ $(function(){
     $('.intNav .prev, .intNav .next').click(goStep);
     $('.intNav .home').click(()=>goToSlide(1));
     $('.intNav .anterior, .intNav .siguiente').click(avanzaTema);
-    $('#portada nav .button').each( (idx, el) =>{ 
+    /*$('#portada nav .button').each( (idx, el) =>{ 
         $(el).after( $('<span>').addClass('tooltip').text( $(el).data('title')));
-    });
+    });*/
 });
 
