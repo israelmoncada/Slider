@@ -63,7 +63,7 @@ $(function(){
     /*$('#portada nav .button').each( (idx, el) =>{ 
         $(el).after( $('<span>').addClass('tooltip').text( $(el).data('title')));
     });*/
-    $('.intro, .intro > *').click(()=>goToSlide(inSlide+1));
+    $('.intro, .intro > *, .creditos').click(()=>goToSlide(inSlide+1));
 
 });
 

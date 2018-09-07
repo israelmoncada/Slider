@@ -163,9 +163,10 @@ div.imgResponsive.title{
     background: #fff url(../images/intro/2_1.jpg) center center/ cover;    
 }
 #intro2 .centro{
-    background: transparent url(../images/intro/2_2.png)  no-repeat center center/ contain;
-    width: 100%;
+    background: transparent url(../images/intro/2_2.png)  no-repeat center center/ contain;    
     height: 100%;
+    width: 50%;    
+    margin: auto;
 }
 #intro3{
     background: #fff url(../images/intro/3_1.jpg) center center/ cover;    
@@ -277,7 +278,9 @@ div.imgResponsive.title{
 #Aprendizaje .navToolbar .prev{ background-image: url(../images/7/ant.png) }
 #Aprendizaje .navToolbar .next{ background-image: url(../images/7/next.png) }
 
-#Creditos { background: #fff;  color: #333; font-size: 0.8em; font-family: 'Avenir-lt'  }
+#Creditos, #Creditos2  { background: #fff;  color: #333; font-size: 0.75em; font-family: 'Avenir-lt';  padding: 3em 2em; }
+#Creditos H2, #Creditos2 H2{ font-size: 1.3rem; }
+
 
 @media (max-width:950px){
     #portada .titulo{height: 25%;}
