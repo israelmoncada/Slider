@@ -146,15 +146,41 @@ div.imgResponsive.title{
     height: calc( 100% - 136px);
 }
 
-/*Intro*/
-#intro{
-    background: #fff url(../images/intro/1.jpg) center center/ cover;    
+/*Intros*/
+#intro1{
+    background: #000 url(../images/intro/1_1.jpg) center center/cover;
 }
-#intro .centro{
-    background: transparent url(../images/intro/2.png)  no-repeat center center/ contain;
+#intro1 .texto{
+    position: absolute;
+    bottom: 2%;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1106px;
+    left: 0; right: 0;
+}
+#intro2{
+    background: #fff url(../images/intro/2_1.jpg) center center/ cover;    
+}
+#intro2 .centro{
+    background: transparent url(../images/intro/2_2.png)  no-repeat center center/ contain;
     width: 100%;
     height: 100%;
 }
+#intro3{
+    background: #fff url(../images/intro/3_1.jpg) center center/ cover;    
+}
+#intro3 .superior, #intro3 .inferior{
+    position: absolute;
+    top: 20%;
+    width: 45%;
+    max-width: 1307px;    
+}
+#intro3 .inferior{
+    top: inherit;
+    bottom: 0;
+}
+
 
 /*Portada*/
 #portada{
@@ -190,13 +216,13 @@ div.imgResponsive.title{
     cursor: pointer;
     background: url(../images/botones/1.png) no-repeat center center/contain;
 }
-#portada nav .button:nth-child(2){background-image: url(../images/botones/2.png);}
+#portada nav .button:nth-child(2){background-image: url(../images/botones/4.png);}
 #portada nav .button:nth-child(3){background-image: url(../images/botones/3.png);}
-#portada nav .button:nth-child(4){background-image: url(../images/botones/4.png);}
-#portada nav .button:nth-child(5){background-image: url(../images/botones/5.png);}
+#portada nav .button:nth-child(4){background-image: url(../images/botones/5.png);}
+#portada nav .button:nth-child(5){background-image: url(../images/botones/7.png);}
 #portada nav .button:nth-child(6){background-image: url(../images/botones/6.png);}
-#portada nav .button:nth-child(7){background-image: url(../images/botones/7.png);}
-#portada nav .button:nth-child(2){background-image: url(../images/botones/2.png);}
+#portada nav .button:nth-child(7){background-image: url(../images/botones/2.png);}
+
 
 #portada nav .button+.tooltip{ position: absolute; background: #fff; color: #5a3908; padding: 2px; border: solid 1px;}
 /*1*/
@@ -277,5 +303,10 @@ div.imgResponsive.title{
     .slide p{ font-size: 0.5em; }
 }
 @media (orientation:portrait ){
-    img.imgResponsive.long{max-width: 100%;}   
+    .slide.banner-left{
+        padding-bottom: 31px;
+        padding-top: 31px;
+    }
+    img.imgResponsive.long{max-width: 100%;}
+    div.imgResponsive.title{ height: 100%; }
 }
