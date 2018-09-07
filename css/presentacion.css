@@ -148,7 +148,7 @@ div.imgResponsive.title{
 
 /*Intros*/
 #intro1{
-    background: #000 url(../images/intro/1_1.jpg) center center/cover;
+    background: #000 url(../images/intro/1_1.jpg) center 100%/cover;
 }
 #intro1 .texto{
     position: absolute;
@@ -302,11 +302,18 @@ div.imgResponsive.title{
     .slide h1{ font-size: 1.05em; }
     .slide p{ font-size: 0.5em; }
 }
-@media (orientation:portrait ){
+@media only screen  and (min-device-width: 320px) 
+and (max-device-width: 815px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    div.imgResponsive.title{height: calc( 100% - 56px)}
+    .slide h1{ font-size: 1.05em; }
+    .slide .navToolbar>div{ height: 19px;}
+    .slide .navToolbar.bottom>div {height: 20px;}
     .slide.banner-left{
-        padding-bottom: 31px;
-        padding-top: 31px;
+        padding-bottom: 35px;
+        padding-top: 35px;
     }
     img.imgResponsive.long{max-width: 100%;}
-    div.imgResponsive.title{ height: 100%; }
+    
 }
